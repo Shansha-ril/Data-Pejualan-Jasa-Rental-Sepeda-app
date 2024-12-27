@@ -13,8 +13,8 @@ def create_hourly_count_df(df):
     hourly_count = df.groupby(by="hr").cnt.sum().reset_index()
     return hourly_count
 
-day_df = pd.read_csv("Submit/dashboard-data/day_data.csv")
-hour_df = pd.read_csv("Submit/dashboard-data/hour_data.csv")
+day_df = pd.read_csv("Submit/dashboard/day_data.csv")
+hour_df = pd.read_csv("Submit/dashboard/hour_data.csv")
 
 min_date = day_df["dteday"].min()
 max_date = day_df["dteday"].max()
